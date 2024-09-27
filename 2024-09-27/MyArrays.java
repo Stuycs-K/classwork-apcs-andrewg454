@@ -9,7 +9,11 @@ public class MyArrays{
         return endstring.substring(0, endstring.length() -2);
     }
 public static int[] returnCopy(int[]ary){
-    int[] newArray = new int[ary.length()];
+    int[] newArray = new int[ary.length];
+    for(int i =0; i<ary.length; i++){
+        newArray[i] = ary[i];
+    }
+    return newArray;
 }
     public static void main(String[] args){
         int[] testArray = {1,2,3,4,5,6,10};
