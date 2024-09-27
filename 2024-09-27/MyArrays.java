@@ -16,6 +16,7 @@ public static int[] returnCopy(int[]ary){
     public static void main(String[] args){
         int[] testArray = {1,2,3,4,5,6,10};
         System.out.println("result should be" + arrayToString(testArray) + ", actual result is " + arrayToString(returnCopy(testArray)));
+        System.out.println("They aren't the same because the test array's address is " +  testArray + " and the address of the function array is " + returnCopy(testArray));
         
     }
 } 
