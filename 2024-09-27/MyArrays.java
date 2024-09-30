@@ -34,6 +34,6 @@ public static int[] concatArray(int[] ary1, int[] ary2) {
         int[] testArray2 = {2, 4, 6, 8, 100};
         System.out.println("result should be" + arrayToString(testArray) + ", actual result is " + arrayToString(returnCopy(testArray)));
         System.out.println("They aren't the same because the test array's address is " +  testArray + " and the address of the function array is " + returnCopy(testArray));
-        System.out.println(arrayToString(concatArray(testArray, testArray2)));
+        System.out.println("result should be" + arrayToString(testArray).substring(0,arrayToString(testArray).length() - 1 ) + ", "+ arrayToString(testArray2).substring(1,arrayToString(testArray2).length()) + ", actual result is " + arrayToString(concatArray(testArray, testArray2)));
     }
 } 
