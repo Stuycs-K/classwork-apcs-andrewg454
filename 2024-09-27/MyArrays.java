@@ -13,22 +13,22 @@ public static int[] returnCopy(int[]ary){
     }
     return newArray;
 }
-public static int[] concatArray(int[]ary1,int[]ary2){
-        int[] result = new int[nums.length];
-    int index = 0;
-    for (int i = 0; i < nums.length; i++) {
-            result[index] = ary1[i];
-            index++;
+public static int[] concatArray(int[] ary1, int[] ary2) {
+    int[] result = new int[ary1.length + ary2.length];
+    
+    for (int i = 0; i < ary1.length; i++) {
+        result[i] = ary1[i];
     }
-    for (int i = 0; i < nums.length; i++) {
-            result[index] = ary2[i];
-            index++;
+    
+    for (int j = 0; j < ary2.length; j++) {
+        result[ary1.length + j] = ary2[j];
     }
-
+    
     return result;
 }
 
-}
+
+
     public static void main(String[] args){
         int[] testArray = {1,2,3,4,5,6,10};
         int[] testArray2 = {2, 4, 6, 8, 100};
