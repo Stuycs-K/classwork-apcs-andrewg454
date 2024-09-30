@@ -12,9 +12,9 @@ public class ArrayMethods{
 		String s = "[";
 		for(int[] i : arr){
 			s += arrayToString(i);
-			s += ", "
+			s += ", ";
 		}
-		s=s.substring(0, s.length() - 2)
+		s=s.substring(0, s.length() - 2);
 		return s + "]";
 	}
 	public static void testArr2DToStr(){
