@@ -65,6 +65,22 @@ public class ArrayMethods{
 			}
 		}
 	}
+	public static int[] copy(int[] arr){
+		int[] copylst = new int[arr.length];
+		for(int i=0; i<arr.length; i++){
+			copylst[i] = arr[i];
+		}
+		return copylst;
+	}
+	public static int[][] copy(int[][] nums){
+		int[][] copylst = new int[nums.length][];
+	  for(int i=0; i<nums.length; i++){
+			copylst[i] = copy(nums[i]);
+		}
+		return copylst;
+	}
+
+
 
 	public static void main(String[] args){
 		System.out.println("[1, 2, 3]" + " | " + arrayToString(new int[]{1, 2, 3}));
