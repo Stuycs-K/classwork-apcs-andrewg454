@@ -8,7 +8,7 @@ public class ArrayMethods{
         return endstring;}
 
 
-	public static String arr2DToStr(int[][] arr){
+	public static String arrayToString(int[][] arr){
 		String s = "[";
 		for(int[] i : arr){
 			s += arrayToString(i);
@@ -17,8 +17,8 @@ public class ArrayMethods{
 		s=s.substring(0, s.length() - 2);
 		return s + "]";
 	}
-	public static void testArr2DToStr(){
-		System.out.println("[[1, 2, 3], [4, 5, 6], [7, 8, 9]]" + " | " + arr2DToStr(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}));
+	public static void testarrayToString(){
+		System.out.println("[[1, 2, 3], [4, 5, 6], [7, 8, 9]]" + " | " + arrayToString(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}));
 	}
 	public static int arr2DSum(int[][] nums){
 		int sum = 0 ;
@@ -47,7 +47,7 @@ public class ArrayMethods{
 }
 	public static void testswapRC(){
 		int [][] testArray = {{1, 2, 3, 4}, {10, 20, 30, 40}};
-		System.out.println("The result should be [[1,10], [2, 20], [3, 30], [4, 40]] and the result I got is " + arr2DToStr(swapRC(testArray)));
+		System.out.println("The result should be [[1,10], [2, 20], [3, 30], [4, 40]] and the result I got is " + arrayToString(swapRC(testArray)));
 	}
 
 	public static void replaceNegative(int[][] vals){
@@ -65,7 +65,7 @@ public class ArrayMethods{
 			}
 		}
 	}
-	public static int[] copy(int[] arr){
+	public static int[] copyHelper(int[] arr){
 		int[] copylst = new int[arr.length];
 		for(int i=0; i<arr.length; i++){
 			copylst[i] = arr[i];
@@ -75,7 +75,7 @@ public class ArrayMethods{
 	public static int[][] copy(int[][] nums){
 		int[][] copylst = new int[nums.length][];
 	  for(int i=0; i<nums.length; i++){
-			copylst[i] = copy(nums[i]);
+			copylst[i] = copyHelper(nums[i]);
 		}
 		return copylst;
 	}
@@ -84,13 +84,13 @@ public class ArrayMethods{
 
 	public static void main(String[] args){
 		System.out.println("[1, 2, 3]" + " | " + arrayToString(new int[]{1, 2, 3}));
-		testArr2DToStr();
+		testarrayToString();
 		testArr2DSum();
 		testswapRC();
 		System.out.println("replaceNegative");
 		int[][] arr10 = new int[][]{{-1, 2, 3}, {4, 5, -6}, {7, -8, 9}};
 		replaceNegative(arr10);
-		System.out.println("[[-1, 2, 3], [4, 5, -6], [7, -8, 9]] | expected:  | returned: " + arr2DToStr(arr10));
+		System.out.println("[[-1, 2, 3], [4, 5, -6], [7, -8, 9]] | expected: [[1, 2, 3], [4, 5, 0], [7, 0, 9]] | returned: " + arrayToString(arr10));
 
 
 ;;	}
