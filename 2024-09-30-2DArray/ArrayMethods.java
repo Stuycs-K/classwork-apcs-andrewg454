@@ -21,15 +21,23 @@ public class ArrayMethods{
 		System.out.println("[[1, 2, 3], [4, 5, 6], [7, 8, 9]]" + " | " + arr2DToStr(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}));
 	}
 	public static int arr2DSum(int[][] nums){
-		return 0;
+		int sum = 0 ;
+		for(int i = 0; i < nums.length; i++){
+			for (int z = 0; z < nums[i].length; z++){
+				sum += nums[i][z];
+			}
+		}
+		return sum;
 	}
-	public static boolean testArr2DSum(int[][] nums){
-		return false;
+	public static void testArr2DSum(){
+		int [][] testArray = {{1, 2, 3, 4}, {10, 20, 30}, {25,5}};
+		System.out.println("The result should be 100, and the result I got is " + arr2DSum(testArray));
 		//idk how to test this
 	}
 	public static void main(String[] args){
 		System.out.println("[1, 2, 3]" + " | " + arrayToString(new int[]{1, 2, 3}));
 		testArr2DToStr();
+		testArr2DSum();
 	}
 
 
