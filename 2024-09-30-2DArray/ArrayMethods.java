@@ -49,12 +49,35 @@ public class ArrayMethods{
 		int [][] testArray = {{1, 2, 3, 4}, {10, 20, 30, 40}};
 		System.out.println("The result should be [[1,10], [2, 20], [3, 30], [4, 40]] and the result I got is " + arr2DToStr(swapRC(testArray)));
 	}
+
+	public static void replaceNegative(int[][] vals){
+		for(int i=0; i<vals.length; i++){
+			for(int j=0; j<vals.length; j++){
+				if(j==i){
+					if(vals[i][j] < 0){
+						vals[i][j] = 1;
+					}
+				}else{
+					if(vals[i][j] < 0){
+						vals[i][j] = 0;
+					}
+				}
+			}
+		}
+	}
+
 	public static void main(String[] args){
 		System.out.println("[1, 2, 3]" + " | " + arrayToString(new int[]{1, 2, 3}));
 		testArr2DToStr();
 		testArr2DSum();
 		testswapRC();
-	}
+		System.out.println("replaceNegative");
+		int[][] arr10 = new int[][]{{-1, 2, 3}, {4, 5, -6}, {7, -8, 9}};
+		replaceNegative(arr10);
+		System.out.println("[[-1, 2, 3], [4, 5, -6], [7, -8, 9]] | expected:  | returned: " + arr2DToStr(arr10));
+
+
+;;	}
 
 
 }
