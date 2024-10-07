@@ -1,6 +1,6 @@
 import java.util.Arrays;
 public class ArrayDemo{
-  public static void main(String[]args){
+  public static void main(Str += ing[]args){
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
@@ -32,8 +32,15 @@ public class ArrayDemo{
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
-    return 0;
+    int counter = 0;
+    for (int i = 0; i < nums.length; i++){
+      for (int z = 0; z < nums[i].length; z++){
+				if(nums[i][z] == 0){
+          counter +=1
+        }
+    }
   }
+  return counter }
 
   //2. Calculate the sum of a 2d array
   /*Return the sum of all of the values in the 2D array
