@@ -9,6 +9,7 @@ public class ArrayDemo{
     testArr2DSum();
     testarrayToString();
     testReplaceNegative();
+    testCountZeros2D();
 
   }
   public static void testswapRC(){
@@ -29,7 +30,10 @@ public class ArrayDemo{
         int[][] testArray = new int[][]{{-1, 2, 3}, {4, 5, -6}, {7, -8, 9}};
         System.out.println("[[-1, 2, 3], [4, 5, -6], [7, -8, 9]] | expected: [[1, 2, 3], [4, 5, 0], [7, 0, 9]] | returned: " + arrayToString(testArray));
     }
-
+    public static void testCountZeros2D(){
+      int[][] testArray = new int[][]{{-1, 0, 3}, {4, 5, -6}, {0, -8, 9}, {0, 0, 0, 0, 200, 403, 43}};
+      System.out.println("The result should be 6, and my answer is " + countZeros2D(testArray));
+    }
 
 
 
