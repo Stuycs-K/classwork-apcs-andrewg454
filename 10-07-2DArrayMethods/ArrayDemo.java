@@ -5,8 +5,34 @@ public class ArrayDemo{
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
     //do not use any other Arrays.method()
+    testswapRC();
+    testArr2DSum();
+    testarrayToString();
+    testReplaceNegative();
 
   }
+  public static void testswapRC(){
+		int [][] testArray = {{1, 2, 3, 4}, {10, 20, 30, 40}};
+		System.out.println("The result should be [[1,10], [2, 20], [3, 30], [4, 40]] and the result I got is " + arrayToString(swapRC(testArray)));
+	}
+  public static void testArr2DSum(){
+  		int [][] testArray = {{1, 2, 3, 4}, {10, 20, 30}, {25,5}};
+  		System.out.println("The result should be 100, and the result I got is " + arr2DSum(testArray));
+      testArray = {{-1, -2, -3, -4}, {10, 20, -30}, {25,5}}
+      System.out.println("The result should be 60, and the result I got is " + arr2DSum(testArray));
+  	}
+    public static void testarrayToString(){
+      int [][] testArray = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+    		System.out.println(Arrays.toString(testArray) + " | " + arrayToString(testArray)));
+    	}
+    public static void testReplaceNegative(){
+        int[][] testArray = new int[][]{{-1, 2, 3}, {4, 5, -6}, {7, -8, 9}};
+        System.out.println("[[-1, 2, 3], [4, 5, -6], [7, -8, 9]] | expected: [[1, 2, 3], [4, 5, 0], [7, 0, 9]] | returned: " + arrayToString(testArray));
+    }
+
+
+
+
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
   public static String arrToString(int[]ary){
