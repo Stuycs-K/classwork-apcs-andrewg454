@@ -142,7 +142,17 @@ public class ArrayDemo{
   //   Note there is no whitespace in the string, it all one line with no spaces/tabs.
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
-  public static String htmlTable(int[][]nums){
-    return "";
-  }
+public class HtmlTableGenerator {
+    public static String htmlTable(int[][] nums) {
+        String result = "<table>"
+        for (int i = 0; i < nums.length; i++) {
+            result += "<tr>"
+            for (int z = 0; z < nums[i].length; z++) {
+                result += "<td>" + nums[i][z] + "</td>"
+            }
+            result += "</tr>"
+        }
+        result += "</table>"
+        return result
+    }
 }
