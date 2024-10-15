@@ -24,5 +24,19 @@ public class Demo{
     System.out.println( distance(p3,p4));
     System.out.println( Point.distance(p3,p4));
     System.out.println( p3.distanceTo(p4));
+
+    Point triPoint1 = new Point(0, 0);
+    Point triPoint2 = new Point(2, 0);
+
+    // 1^2 + x^2 = 2^2
+    // 1 + x^2 = 4
+    // x^2 = 3
+    Point triPoint3 = new Point(1, Math.sqrt(3));
+
+    System.out.println("Side Length Between Point 1 and 2: " + distance(triPoint1, triPoint2));
+    System.out.println("Side Length Between Point 1 and 3: " + triPoint1.distanceTo(triPoint3));
+    System.out.println("Side Length Between Point 2 and 3: " + Point.distance(triPoint2, triPoint3));
+
+
   }
 }
