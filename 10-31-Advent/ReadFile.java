@@ -9,7 +9,17 @@ public class ReadFile {
     try {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
-      //CODE THAT SCANS THE FILE.
+      int counter = 0;
+      while(input.hasNextLine()){
+          counter++;
+          if (counter % 2 != 1){
+            input.nextLine();
+          }
+          else {
+            System.out.println(input.nextLine());
+          }
+          //do something with the next line of the file
+      }
       input.close();//releases the file from your program
 
     } catch (FileNotFoundException ex) {
