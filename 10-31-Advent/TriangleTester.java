@@ -1,11 +1,13 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class TriangleTester {
 
   public static void main(String[] args){
-    System.out.println(countTrianglesA("inputTri.txt"));
+   //System.out.println(countTrianglesA("inputTri.txt"));
     System.out.println(countTrianglesB("inputTri.txt"));
   }
 
@@ -39,35 +41,50 @@ public class TriangleTester {
 
     //return (Math.max(Integer.parseInt(array[0]), Integer.parseInt(array[1]), Integer.parseInt(array[2])) < (Integer.parseInt(array[0]) + Integer.parseInt(array[1]) + Integer.parseInt(array[2]) - Math.max(Integer.parseInt(array[0]), Integer.parseInt(array[1]), Integer.parseInt(array[2]))));
   }
-  public static boolean checkTriangleB(int a, int b, int c){
-    return (a + b >c && c + b > a && a + c > b);}
-  public static int countTrianglesB(String filename){
-    int count = 0;
-    Scanner input = new Scanner(filename);
-    int rowCount = 0;
+ 
+  public static int countTrianglesB(String filename) {
+        try {
+            File file = new File("inputTri.txt");
+            Scanner input = new Scanner(file);
+            ArrayList<Integer> col1 = new ArrayList<>();
+            ArrayList<Integer> col2 = new ArrayList<>();
+            ArrayList<Integer> col3 = new ArrayList<>();
             while (input.hasNextLine()) {
-                input.nextLine();
-                rowCount++;
+                String currentLine = input.nextLine().trim();
+                String[] currentArray = currentLine.split("\\s+");
+                col1.add(Integer.parseInt(currentArray[0]));
+                col2.add(Integer.parseInt(currentArray[1]));
+                col3.add(Integer.parseInt(currentArray[2]));
             }
-    input = new Scanner(filename);
-    int[][] numbers = new int[rowCount][3];
-    int ind = 0;
-    while (input.hasNext()) {
-        numbers[ind][0] = input.nextInt();
-        numbers[ind][1] = input.nextInt();
-        numbers[ind][2] = input.nextInt();
-        ind++;
+            int counter = 0;
+            counter += countValidTriangles(col1);
+            counter += countValidTriangles(col2);
+            counter += countValidTriangles(col3);
+            return counter;
+
+        } catch (FileNotFoundException ex) {
+            System.out.println("File not found");
+            return 0;
         }
-    int numRows = rowCount / 3;
-    for (int i = 0; i < numRows; i++) {
-        int a = numbers[i][0];
-        int b = numbers[i + numRows][1];
-        int c = numbers[i + 2 * numRows][2];
-    if (checkTriangleB(a, b, c)){
-      count +=1;
+    }
+
+    private static int countValidTriangles(ArrayList<Integer> column) {
+        int counter = 0;
+        for (int i = 0; i < column.size() - 2; i++) {
+            int a = column.get(i);
+            int b = column.get(i + 1);
+            int c = column.get(i + 2);
+            if (checkTriangle(a, b, c)) {
+                counter++;
+            }
+            i+=2;
+        }
+        return counter;
+    }
+
+    private static boolean checkTriangle(int a, int b, int c) {
+        return (a + b > c) && (a + c > b) && (b + c > a);
     }}
 
-return count;
-}}
 
 //95
