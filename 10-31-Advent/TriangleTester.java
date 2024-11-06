@@ -39,7 +39,25 @@ public class TriangleTester {
 
     //return (Math.max(Integer.parseInt(array[0]), Integer.parseInt(array[1]), Integer.parseInt(array[2])) < (Integer.parseInt(array[0]) + Integer.parseInt(array[1]) + Integer.parseInt(array[2]) - Math.max(Integer.parseInt(array[0]), Integer.parseInt(array[1]), Integer.parseInt(array[2]))));
   }
-  public static int countTrianglesB(String filename)
+  public static int countTrianglesB(String filename){
+    int count = 0;
+    Scanner input = new Scanner(filename);
+    int rowCount = 0;
+            while (scanner.hasNextLine()) {
+                scanner.nextLine();
+                rowCount++;
+            }
+    input = new Scanner(filename);
+    int[][] numbers = new int[rowCount][3];
+    int i = 0;
+    while (scanner.hasNext()) {
+        numbers[rowIndex][0] = scanner.nextInt();
+        numbers[rowIndex][1] = scanner.nextInt();
+        numbers[rowIndex][2] = scanner.nextInt();
+        rowIndex++;
+        }
+        
+  }
 
 }
 
