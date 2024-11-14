@@ -1,6 +1,6 @@
 // When we overrided the getName() method, whenever we use the getName() with an object of the bird class, it returns The MIGHTY and the name/
 // When we use the getName() method with an object of the Animal class, it will not add the MIGHTY...
-
+// This tells us that overriddenmethods only apply to objects of the class with the overwritten method.
 // This gave us an error because an animal is not always a bird.
 // In this instance, we tried defining a bird as an animal, which is not always true, resulting in an error.
 //
