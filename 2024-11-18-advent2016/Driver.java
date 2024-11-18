@@ -7,11 +7,18 @@ public class Driver{
   public static void main(String[] args){
     public static int countTrianglesA(String filename){
       try {
+        File file = new File("inputTri.txt");
+        Scanner input = new Scanner(file);
         ArrayList<String> str = new ArrayList<String>();
-        while (scan.hasNextString()) {
-          str.add(scan.nextString());
+        while (input.hasNextString()) {
+          str.add(input.nextString());
 }
         }
+        catch (FileNotFoundException ex) {
+        //File not found what should you do?
+        System.out.println("File not found");
+        return 0; //you can return from a void function just don't put a value.
+      }
     }
   }
   public static int day1(Arimport java.io.File;
