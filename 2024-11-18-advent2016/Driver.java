@@ -5,38 +5,31 @@ import java.util.Arrays;
 import java.util.ArrayList;
 public class Driver{
   public static void main(String[] args){
-    public static int countTrianglesA(String filename){
       try {
-        File file = new File("inputTri.txt");
+        File file = new File("text.txt");
         Scanner input = new Scanner(file);
         ArrayList<String> str = new ArrayList<String>();
-        while (input.hasNextString()) {
-          str.add(input.nextString());
+        while (input.hasNext()) {
+          str.add(input.next());
 }
         }
         catch (FileNotFoundException ex) {
         //File not found what should you do?
         System.out.println("File not found");
-        return 0; //you can return from a void function just don't put a value.
       }
     }
-  }
-  public static int day1(Arimport java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.util.Arrays;
-import java.util.ArrayList;ray arr){
+public static int day1(String[] arr){
     int count = 0;
     int forward = 0;
     int backward = 0;
     int left = 0;
     int right = 0;
     int direction = 1;
-    for (int i = 0; i < arr.length(); i++){
-      if(arr[i].has("L")){
+    for (int i = 0; i < arr.length; i++){
+      if(arr[i].contains("L")){
         if (direction == 0){
           direction = 4;
-          left += parseInt(arr[i].substring(1));
+          left += parseInt(arr[i]);
         }
         else{
           direction -= 1;
