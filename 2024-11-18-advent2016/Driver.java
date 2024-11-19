@@ -5,19 +5,10 @@ import java.util.Arrays;
 import java.util.ArrayList;
 public class Driver{
   public static void main(String[] args){
-      try {
-        File file = new File("text.txt");
-        Scanner input = new Scanner(file);
-        ArrayList<String> str = new ArrayList<String>();
-        while (input.hasNext()) {
-          str.add(input.next());
-}
-        }
-        catch (FileNotFoundException ex) {
-        //File not found what should you do?
-        System.out.println("File not found");
-      }
+    String[] str = {"L1", "L2", "R3"};
+      System.out.println(day1(str));
     }
+//  public static String[] data()
 public static int day1(String[] arr){
     int count = 0;
     int forward = 0;
@@ -29,42 +20,45 @@ public static int day1(String[] arr){
       if(arr[i].contains("L")){
         if (direction == 0){
           direction = 4;
-          left += parseInt(arr[i]);
+          left += Integer.parseInt(arr[i].substring(1));
+      //    System.out.println("im adding" + Integer.parseInt(arr[i].substring(1)) + "to the left");
         }
-        else{
+        if(direction != 0){
           direction -= 1;
           if (direction == 1){
-            forward += parseInt(arr[i].substring(1));
+            forward += Integer.parseInt(arr[i].substring(1));
           }
           if (direction == 2){
-            right += parseInt(arr[i].substring(1));
+            right += Integer.parseInt(arr[i].substring(1));
           }
           if (direction == 3){
-            backward += parseInt(arr[i].substring(1));
+            backward += Integer.parseInt(arr[i].substring(1));}
           }
         }
-        if(arr[i].has("R")){
+        if(arr[i].contains("R")){
           if (direction == 4){
             direction = 1;
-            forward += parseInt(arr[i].substring(1));
+            forward += Integer.parseInt(arr[i].substring(1));
           }
-          else{
+          if(direction != 4){
             direction +=1;
             if (direction == 2){
-              right += parseInt(arr[i].substring(1));
+              right += Integer.parseInt(arr[i].substring(1));
             }
             if (direction == 3){
-              backward += parseInt(arr[i].substring(1));
+              backward += Integer.parseInt(arr[i].substring(1));
             }
             if (direction == 4){
-              left += parseInt(arr[i].substring(1));
+              left += Integer.parseInt(arr[i].substring(1));
             }
 
           }
       }
 
-    }
+
+//System.out.println(left + right + forward + backward);
   }
+
   count += Math.abs(left-right);
   count += Math.abs(forward-backward);
   return count;}
