@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 public class Driver{
   public static void main(String[] args){
-    String[] str = {"L2", "L3"};
+    String[] str = {"R2", "R2", "R2", "R2"};
       System.out.println(day1(str));
       System.out.println(data());
     }
@@ -55,7 +55,7 @@ public static int day1(String[] arr){
             direction = 1;
             forward += Integer.parseInt(arr[i].substring(1));
           }
-          if(direction != 4){
+          else{
             direction +=1;}
             if (direction == 2){
               right += Integer.parseInt(arr[i].substring(1));
