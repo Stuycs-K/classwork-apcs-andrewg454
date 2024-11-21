@@ -5,15 +5,19 @@ import java.util.Arrays;
 import java.util.ArrayList;
 public class Driver2{
   public static void main(String[] args){
-    System.out.println(Day2(data()));
-    System.out.println(data());
+   System.out.println(Day2(data()));
+  // System.out.println(data());
   }
   public static String data(){
     try{
       Scanner inf = new Scanner(new File("text2.txt"));
       String line = "";
        line += inf.nextLine();
-      System.out.println(line);
+       //String line2 = inf.nextLine();
+       //String line3 = inf.nextLine();
+       //String line4 = inf.nextLine();
+      //String line5 += inf.nextLine();
+    // System.out.println(line);
       return line;
 
     }
