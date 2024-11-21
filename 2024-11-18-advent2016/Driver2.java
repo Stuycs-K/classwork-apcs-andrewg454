@@ -5,8 +5,22 @@ import java.util.Arrays;
 import java.util.ArrayList;
 public class Driver2{
   public static void main(String[] args){
-    System.out.println(Day2("UDLRUDLR"));
+    System.out.println(Day2(data()));
+    System.out.println(data());
+  }
+  public static String data(){
+    try{
+      Scanner inf = new Scanner(new File("text2.txt"));
+      String line = "";
+       line += inf.nextLine();
+      System.out.println(line);
+      return line;
 
+    }
+    catch(Exception e){
+      System.exit(1);
+    }
+    return null;
   }
   public static String Day2(String str){
     //String code = "";
