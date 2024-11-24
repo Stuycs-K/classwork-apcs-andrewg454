@@ -40,12 +40,12 @@ public class Driver7{
         for (int z = 0; z < str.length() - 3; z++) { 
             if ((str.charAt(z) == str.charAt(z + 3)) && 
                 (str.charAt(z + 1) == str.charAt(z + 2)) && 
-                (str.charAt(z) != str.charAt(z + 1))) {
-                if (valid) {
+                (str.charAt(z) != str.charAt(z + 1)) &&
+                valid == true
+                ) {
                     count += 1;
                     System.out.println(str);
                     z+= str.length()-z;
-                }
             }
         }
          valid = true;
