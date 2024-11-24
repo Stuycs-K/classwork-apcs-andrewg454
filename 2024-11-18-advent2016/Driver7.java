@@ -3,11 +3,26 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
-public class Driver3{
+public class Driver7{
     public static void main(String[] args){
-        String[] test = {"abba[mnop]qrst", "abcd[bddb]xyyx", "aaaa[qwer]tyui", "ioxxoj[asdfgh]zxcvbn", "abasioewn"};
-        System.out.println(Day7(test));
+        System.out.println(Day7(readFile("text7.txt")));
     }
+    public static String[] readFile(String fileName) {
+    try (Scanner inf = new Scanner(new File(fileName));) {
+            ArrayList<String> linesList = new ArrayList<String>();
+            while (inf.hasNextLine()) {
+                linesList.add(inf.nextLine());
+               return (linesList.toArray(new String[0]));     
+            }
+             Day7(linesList.toArray(new String[0]));
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+            return null;
+        }
+        return null;
+        }
+     //   String[] test = {"abba[mnop]qrst", "abcd[bddb]xyyx", "aaaa[qwer]tyui", "ioxxoj[asdfgh]zxcvbn", "abasioewn"};
+      //  System.out.println(Day7(test));
     public static int Day7(String[] arr){
     boolean valid = true;
     int count = 0;
@@ -32,6 +47,7 @@ public class Driver3{
                 }
             }
         }
+         valid = true;
     }
     return count;
 }
