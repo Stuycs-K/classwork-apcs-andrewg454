@@ -11,10 +11,10 @@ public class Driver {
         int borderColor = Text.MAGENTA;
         int middle = Text.WHITE;
         Text.go(1,1);
-        Text.color(borderColor);
+        Text.color(borderColor+10);
         for (int i = 0; i < width; i++) {
             Text.go(1, 1+i);
-             Text.color(borderColor);
+             Text.color(borderColor + 10);
            // System.out.print(" ");
         }
         System.out.println();
@@ -23,7 +23,7 @@ public class Driver {
             System.out.print(" ");
             for (int j = 0; j < width - 2; j++) {
                 Text.go(i, j);
-                Text.color(middle);
+                Text.color(middle + 10);
             }
            System.out.print(" ");
             System.out.println();
@@ -31,7 +31,7 @@ public class Driver {
         Text.color(borderColor);
         for (int i = 0; i < width; i++) {
             Text.go(30, i);
-              Text.color(borderColor);
+              Text.color(borderColor + 10);
            // System.out.print(" ");
         }
         System.out.println();
