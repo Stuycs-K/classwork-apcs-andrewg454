@@ -1,11 +1,11 @@
 public class Driver{
+        public static int width = 80;
+       public static int height = 30;
     public static void main (String[] args){
 step5();
 step67();
     }   
     public static void step5(){
-        int width = 80;
-        int height = 30;
         int borderColor = Text.MAGENTA;
         int middle = Text.WHITE;
         Text.color(borderColor);
@@ -38,6 +38,10 @@ step67();
         int spacing = 26;
         Text.go(2, 10);
         for (int i = 0; i < 3; i++) {
+            if (numbers[i] < 25) {
+                Text.color(Text.BRIGHT, Text.RED);
+            } else if (numbers[i] > 75) {
+                Text.color(Text.BRIGHT, Text.GREEN);
             System.out.print(numbers[i]);
             if (i < 2) {
                 for (int j = 0; j < spacing; j++) {
@@ -48,4 +52,11 @@ step67();
         System.out.println();
         System.out.print(Text.RESET);
     }
-    }
+        for (int i = 0; i < width; i++) {
+            System.out.print("-");  
+        }
+        System.out.println();
+        
+        Text.go(31, 0); 
+        System.out.print(Text.RESET);
+    } }
