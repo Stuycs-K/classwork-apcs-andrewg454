@@ -29,10 +29,11 @@ step67();
         System.out.println();
     }
     public static void step67(){
-        int rand = Math.random();
+        
         int[] numbers = new int[3];
         for (int i = 0; i < 3; i++) {
-            numbers[i] = rand * 100;
+            double rand = Math.random();
+            numbers[i] = (int)(rand * 100);
         }
         int spacing = 26;
         Text.go(2, 10);
