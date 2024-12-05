@@ -18,7 +18,7 @@ public class Driver {
             System.out.print(" ");
         }
         System.out.println();
-        for (int i = 0; i < height - 2; i++) {
+        for (int i = 1; i < height ; i++) {
             Text.color(middle+10);
             System.out.print(" ");
             for (int j = 0; j < width - 2; j++) {
