@@ -17,17 +17,17 @@ public class Driver {
     
             System.out.print(" ");
         }
-    //    System.out.println();
-     //   for (int i = 1; i < height ; i++) {
-     //       Text.color(middle+10);
-       //     System.out.print(" ");
-         //   for (int j = 0; j < width - 2; j++) {
-          //      Text.go(i, j);
-           //    System.out.print(" ");
-            //}
-         //  System.out.print(" ");
-          //  System.out.println();
-        //}
+        System.out.println();
+       for (int i = 1; i < height ; i++) {
+           Text.color(middle+10);
+            System.out.print(" ");
+            for (int j = 0; j < width - 2; j++) {
+                Text.go(i, j);
+               System.out.print(" ");
+            }
+           System.out.print(" ");
+            System.out.println();
+        }
         Text.color(borderColor + 10);
         for (int i = 0; i < width; i++) {
             Text.go(30, i);
@@ -37,7 +37,7 @@ public class Driver {
         System.out.println();
     }
 
-    public static void step67() {
+    public static void step67(){
         int[] numbers = new int[3];
         for (int i = 0; i < 3; i++) {
             double rand = Math.random();
