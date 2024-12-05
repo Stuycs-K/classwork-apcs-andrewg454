@@ -9,7 +9,7 @@ public class Driver {
 
     public static void step5() {
         int borderColor = Text.MAGENTA;
-       // int middle = Text.WHITE;
+        int middle = Text.WHITE;
         Text.go(1,1);
         Text.color(borderColor+10);
         for (int i = 0; i < width; i++) {
