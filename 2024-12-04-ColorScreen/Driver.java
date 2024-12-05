@@ -14,15 +14,15 @@ public class Driver {
         Text.color(borderColor);
         for (int i = 0; i < width; i++) {
             Text.go(1, 1+i);
-            System.out.print(" ");
+            System.out.print("a");
         }
         System.out.println();
         for (int i = 0; i < height - 2; i++) {
             Text.color(middle);
-            System.out.print(" ");
+            System.out.print("b");
             for (int j = 0; j < width - 2; j++) {
                 Text.go(i, j);
-                System.out.print(" ");
+                System.out.print("c");
             }
            // System.out.print(" ");
            // System.out.println();
@@ -30,7 +30,7 @@ public class Driver {
         Text.color(borderColor);
         for (int i = 0; i < width; i++) {
             Text.go(30, i);
-            System.out.print(" ");
+            System.out.print("d");
         }
         System.out.println();
     }
