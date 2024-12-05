@@ -21,13 +21,15 @@ public class Driver {
             Text.color(middle);
             System.out.print(" ");
             for (int j = 0; j < width - 2; j++) {
+                Text.go(i, j);
                 System.out.print(" ");
             }
-            System.out.print(" ");
-            System.out.println();
+           // System.out.print(" ");
+           // System.out.println();
         }
         Text.color(borderColor);
         for (int i = 0; i < width; i++) {
+            Text.go(30, j);
             System.out.print(" ");
         }
         System.out.println();
