@@ -4,7 +4,7 @@ public class Driver {
 
     public static void main(String[] args) {
         step5();
-        step67andmore();
+        step67();
     }
 
     public static void step5() {
@@ -37,7 +37,7 @@ public class Driver {
         System.out.println();
     }
 
-    public static void step67andmore() {
+    public static void step67() {
         int[] numbers = new int[3];
         for (int i = 0; i < 3; i++) {
             double rand = Math.random();
