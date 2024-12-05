@@ -45,7 +45,7 @@ public class Driver {
         }
 
         int spacing = 26;
-        Text.go(2, 10);
+        Text.go(3, 10);
 
         for (int i = 0; i < 3; i++) {
             if (numbers[i] < 25) {
