@@ -73,6 +73,6 @@ public class Driver {
         System.out.println();
 
         Text.go(31, 0);
-       System.out.print(Text.RESET);
+      // System.out.print(Text.RESET);
     }
 }
