@@ -29,7 +29,7 @@ public class Driver {
         }
         Text.color(borderColor);
         for (int i = 0; i < width; i++) {
-            Text.go(30, j);
+            Text.go(30, i);
             System.out.print(" ");
         }
         System.out.println();
