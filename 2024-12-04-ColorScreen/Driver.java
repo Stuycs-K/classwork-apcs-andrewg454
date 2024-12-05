@@ -14,25 +14,25 @@ public class Driver {
         Text.color(borderColor+10);
         for (int i = 0; i < width; i++) {
             Text.go(1, 1+i);
-             Text.color(borderColor + 10);
-           // System.out.print(" ");
+    
+            System.out.print(" ");
         }
         System.out.println();
         for (int i = 0; i < height - 2; i++) {
-           // Text.color(middle);
+            Text.color(middle+10);
             System.out.print(" ");
             for (int j = 0; j < width - 2; j++) {
                 Text.go(i, j);
-                Text.color(middle + 10);
+               System.out.print(" ");
             }
            System.out.print(" ");
             System.out.println();
         }
-        Text.color(borderColor);
+        Text.color(borderColor + 10);
         for (int i = 0; i < width; i++) {
             Text.go(30, i);
-              Text.color(borderColor + 10);
-           // System.out.print(" ");
+           //   Text.color(borderColor + 10);
+            System.out.print(" ");
         }
         System.out.println();
     }
@@ -73,6 +73,6 @@ public class Driver {
         System.out.println();
 
         Text.go(31, 0);
-      //  System.out.print(Text.RESET);
+       System.out.print(Text.RESET);
     }
 }
