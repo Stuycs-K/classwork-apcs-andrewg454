@@ -9,7 +9,7 @@ public class Driver {
 
     public static void step5() {
         int borderColor = Text.MAGENTA;
-        int middle = Text.WHITE;
+       // int middle = Text.WHITE;
         Text.go(1,1);
         Text.color(borderColor+10);
         for (int i = 0; i < width; i++) {
@@ -17,17 +17,17 @@ public class Driver {
     
             System.out.print(" ");
         }
-        System.out.println();
-        for (int i = 1; i < height ; i++) {
-            Text.color(middle+10);
-            System.out.print(" ");
-            for (int j = 0; j < width - 2; j++) {
-                Text.go(i, j);
-               System.out.print(" ");
-            }
-           System.out.print(" ");
-            System.out.println();
-        }
+    //    System.out.println();
+     //   for (int i = 1; i < height ; i++) {
+     //       Text.color(middle+10);
+       //     System.out.print(" ");
+         //   for (int j = 0; j < width - 2; j++) {
+          //      Text.go(i, j);
+           //    System.out.print(" ");
+            //}
+         //  System.out.print(" ");
+          //  System.out.println();
+        //}
         Text.color(borderColor + 10);
         for (int i = 0; i < width; i++) {
             Text.go(30, i);
@@ -73,6 +73,6 @@ public class Driver {
         System.out.println();
 
         Text.go(31, 0);
-      // System.out.print(Text.RESET);
+       System.out.print(Text.RESET);
     }
 }
