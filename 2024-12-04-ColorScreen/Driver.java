@@ -1,6 +1,7 @@
 public class Driver{
     public static void main (String[] args){
 step5();
+step67();
     }   
     public static void step5(){
         int width = 80;
@@ -27,4 +28,23 @@ step5();
         }
         System.out.println();
     }
-}
+    public static void step67(){
+        int rand = Math.random();
+        int[] numbers = new int[3];
+        for (int i = 0; i < 3; i++) {
+            numbers[i] = rand * 100;
+        }
+        int spacing = 26;
+        Text.go(2, 10);
+        for (int i = 0; i < 3; i++) {
+            System.out.print(numbers[i]);
+            if (i < 2) {
+                for (int j = 0; j < spacing; j++) {
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println();
+        System.out.print(Text.RESET);
+    }
+    }
