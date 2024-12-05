@@ -13,6 +13,7 @@ public class Driver {
         Text.go(1,1);
         Text.color(borderColor);
         for (int i = 0; i < width; i++) {
+            Text.go(1, 1+i);
             System.out.print(" ");
         }
         System.out.println();
