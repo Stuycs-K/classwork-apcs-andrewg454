@@ -16,18 +16,18 @@ public class Wizard extends Adventurer{
       this.maxHP = hp;
   }
       //give it a short name (fewer than 13 characters)
-  public abstract String getSpecialName(){
+  public String getSpecialName(){
     return specialName;
   }
 
   //accessor methods
-  public abstract int getSpecial(){
+  public int getSpecial(){
     return specialDamage;
   }
-  public abstract void setSpecial(int n){
+  public void setSpecial(int n){
     specialDamage = n;
   }
-  public abstract int getSpecialMax(){
+  public int getSpecialMax(){
     return specialDamage * 2;
   }
 
@@ -36,22 +36,22 @@ public class Wizard extends Adventurer{
     support their allys
   */
   //hurt or hinder the target adventurer
-  public abstract String attack(Adventurer other){
+  public String attack(Adventurer other){
     other.setHP(other.getHP - 1);
   }
 
   //heall or buff the target adventurer
-  public abstract String support(Adventurer other){
+  public String support(Adventurer other){
     other.setHP(other.getHP + 1);
   }
 
   //heall or buff self
-  public abstract String support(){
+  public String support(){
     this.setHP(this.getHP + 1);
   }
 
   //hurt or hinder the target adventurer, consume some special resource
-  public abstract String specialAttack(Adventurer other){
+  public String specialAttack(Adventurer other){
     if(this.specialResource > 0){
     other.setHP(other.getHP - specialDamage);
     specialResource = specialResource-1;
