@@ -5,6 +5,16 @@ public class Wizard extends Adventurer{
     public static void main(String[] args){
 
     }
+
+  public Wizard(String name){
+      this(name, 10);
+  }
+
+  public Wizard(String name, int hp){
+      this.name = name;
+      this.HP = hp;
+      this.maxHP = hp;
+  }
       //give it a short name (fewer than 13 characters)
   public abstract String getSpecialName(){
     return specialName;
