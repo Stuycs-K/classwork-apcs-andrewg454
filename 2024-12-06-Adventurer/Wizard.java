@@ -7,13 +7,11 @@ public class Wizard extends Adventurer{
     }
 
   public Wizard(String name){
-      this(name, 10);
+      super(name);
   }
 
   public Wizard(String name, int hp){
-      this.name = name;
-      this.HP = hp;
-      this.maxHP = hp;
+      super(name, hp);
   }
       //give it a short name (fewer than 13 characters)
   public String getSpecialName(){
