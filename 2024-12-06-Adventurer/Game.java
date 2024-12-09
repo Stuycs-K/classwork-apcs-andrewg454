@@ -8,7 +8,7 @@ public class Game{
   public static String runLoop(CodeWarrior you, Wizard enemy){
     if(you.getHP() > 0){
       if (enemy.getHP() > 0){
-        return "you have enough hp to begin";
+        System.out.println("you have enough hp to begin, you are a CodeWarrior starting with " + you.getHP() + " HP and your special ability is called " + you.getSpecialName());
         Scanner userInput = new Scanner(System.in);
         System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
         String response = userInput.nextLine();
