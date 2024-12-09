@@ -35,25 +35,29 @@ public class Wizard extends Adventurer{
   */
   //hurt or hinder the target adventurer
   public String attack(Adventurer other){
-    other.setHP(other.getHP - 1);
+    other.setHP(other.getHP() - 1);
+    return ("you attacked " + other + "for 1 ");
   }
 
   //heall or buff the target adventurer
   public String support(Adventurer other){
-    other.setHP(other.getHP + 1);
+    other.setHP(other.getHP() + 1);
+    return ("you healed " + other + "for 1 ");
   }
 
   //heall or buff self
   public String support(){
-    this.setHP(this.getHP + 1);
+    this.setHP(this.getHP() + 1);
+    return ("you supported yourself for 1 ");
   }
 
   //hurt or hinder the target adventurer, consume some special resource
   public String specialAttack(Adventurer other){
     if(this.specialResource > 0){
-    other.setHP(other.getHP - specialDamage);
+    other.setHP(other.getHP() - specialDamage);
     specialResource = specialResource-1;
     }
+    return ("you attacked " + other + "for " + specialDamage + "with special attack");
 
   }
 }
