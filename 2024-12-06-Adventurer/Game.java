@@ -1,13 +1,13 @@
 import java.util.Scanner;
 public class Game{
   public static void main(String[] args){
-    CodeWarrior Andy = new CodeWarrior("Andy", 1, "Java");
-    Wizard Enemy = new Wizard("Bob", 20);
+    CodeWarrior Andy = new CodeWarrior("Andy", 10, "Java");
+    Wizard Enemy = new Wizard("Enemy", 20);
     System.out.println(runLoop(Andy, Enemy));
   }
   public static String enemyTurn(CodeWarrior you, Wizard enemy){
     int rand = (int)(Math.random() * 3);
-    System.out.println(rand);
+    //System.out.println(rand);
     if(rand == 0){
       return enemy.attack(you);
     }
@@ -26,7 +26,7 @@ public class Game{
         Scanner userInput = new Scanner(System.in);
         System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
         String response = userInput.nextLine();
-        System.out.println("response is: " + response);
+        //System.out.println("response is: " + response);
         if (response.equals("quit")){
           return "You Quit";
         }
@@ -40,6 +40,7 @@ public class Game{
           System.out.println(you.support(you));
         }        
         System.out.println(enemyTurn(you, enemy));
+        System.out.println("One more turn has elapsed, you now have "+ you.getHP() + " and your enemy has "+ enemy.getHP() + " HP.");
       }
       else{ return "you have defeated the Wizard";}
     }
