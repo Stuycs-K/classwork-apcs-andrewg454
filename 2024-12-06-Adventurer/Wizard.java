@@ -25,6 +25,9 @@ public class Wizard extends Adventurer{
   public void setSpecial(int n){
     specialDamage = n;
   }
+  public int getSpecialResource(){
+    return specialResource;
+  }
   public int getSpecialMax(){
     return specialDamage * 2;
   }

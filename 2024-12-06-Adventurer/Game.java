@@ -20,7 +20,7 @@ public class Game{
     return null;
   }
   public static String runLoop(CodeWarrior you, Wizard enemy){
-    System.out.println("you are a CodeWarrior starting with " + you.getHP() + " HP and your special ability is called " + you.getSpecialName());
+    System.out.println("you are a CodeWarrior starting with " + you.getHP() + " HP and your special ability is called " + you.getSpecialName() + " and costs 8 caffeine to cast");
     while(you.getHP() > 0){
       if (enemy.getHP() > 0){
         Scanner userInput = new Scanner(System.in);
@@ -40,7 +40,7 @@ public class Game{
           System.out.println(you.support(you));
         }        
         System.out.println(enemyTurn(you, enemy));
-        System.out.println("One more turn has elapsed, you now have "+ you.getHP() + " and your enemy has "+ enemy.getHP() + " HP.");
+        System.out.println("One more turn has elapsed, you now have "+ you.getHP() + " HP and " + you.getSpecialResource() + " caffeine and your enemy has "+ enemy.getHP() + " HP and " + enemy.getSpecialResource()+ " special resource");
       }
       else{ return "you have defeated the Wizard";}
     }
