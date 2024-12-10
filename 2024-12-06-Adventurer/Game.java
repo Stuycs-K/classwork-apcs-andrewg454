@@ -44,6 +44,6 @@ public class Game{
       }
       else{ return "you have defeated the Wizard";}
     }
-    return "you don't have enough HP";
+    return "you don't have enough HP, you lose and the wizard wins";
   }}
 
