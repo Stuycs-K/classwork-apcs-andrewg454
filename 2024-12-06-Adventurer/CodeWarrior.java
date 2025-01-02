@@ -39,6 +39,9 @@ public class CodeWarrior extends Adventurer{
   public int getSpecialMax(){
     return caffeineMax;
   }
+   public int getSpecialResource(){
+    return caffeine;
+  }
 
   /*Deal 1-6 damage to opponent, restores 2 caffeine*/
   public String attack(Adventurer other){
